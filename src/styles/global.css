@@ -1,0 +1,12 @@
+@import "tailwindcss";
+
+@utility bg-esmeralda{
+    @apply bg-[#2A8E9E];
+}
+@utility bg-esmeralda-dark{
+    @apply bg-[#023347];
+}
+
+@theme {
+    --font-onest: "Onest Variable", helvetica; 
+}
