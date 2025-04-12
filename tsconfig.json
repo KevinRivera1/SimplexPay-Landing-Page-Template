@@ -1,26 +1,26 @@
 {
-  "extends": "astro/tsconfigs/strict",
-  "include": [".astro/types.d.ts", "**/*"],
-  "exclude": ["dist"],
-  "compilerOptions": {
-    "baseUrl": ".",
-    "paths": {
-      "@application/*": ["src/application/*"],
-      "@application/use-cases/*": ["src/application/use-cases/*"],
-      "@assets/*": ["src/assets/*"],
-      "@assets/svg/*": ["src/assets/svg/*"],
-      "@components/*": ["src/components/*"],
-      "@components/common/*": ["src/components/common/*"],
-      "@components/presentational/*": ["src/components/presentational/*"],
-      "@data/*": ["src/data/*"],
-      "@domain/*": ["src/domain/*"],
-      "@infrastructure/*": ["src/infrastructure/*"],
-      "@infrastructure/repositories/*": ["src/infrastructure/repositories/*"],
-      "@interfaces/*": ["src/interfaces/*"],
-      "@interfaces/containers/*": ["src/interfaces/containers/*"],
-      "@layouts/*": ["src/layouts/*"],
-      "@pages/*": ["src/pages/*"],
-      "@styles/*": ["src/styles/*"]
-    }
-  }
+	"extends": "astro/tsconfigs/strict",
+	"include": [".astro/types.d.ts", "**/*"],
+	"exclude": ["dist"],
+	"compilerOptions": {
+		"baseUrl": ".",
+		"paths": {
+			"@application/*": ["src/application/*"],
+			"@application/use-cases/*": ["src/application/use-cases/*"],
+			"@assets/*": ["src/assets/*"],
+			"@assets/svg/*": ["src/assets/svg/*"],
+			"@components/*": ["src/components/*"],
+			"@components/common/*": ["src/components/common/*"],
+			"@components/presentational/*": ["src/components/presentational/*"],
+			"@data/*": ["src/data/*"],
+			"@domain/*": ["src/domain/*"],
+			"@infrastructure/*": ["src/infrastructure/*"],
+			"@infrastructure/repositories/*": ["src/infrastructure/repositories/*"],
+			"@interfaces/*": ["src/interfaces/*"],
+			"@interfaces/containers/*": ["src/interfaces/containers/*"],
+			"@layouts/*": ["src/layouts/*"],
+			"@pages/*": ["src/pages/*"],
+			"@styles/*": ["src/styles/*"]
+		}
+	}
 }
