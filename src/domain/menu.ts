@@ -1,6 +1,6 @@
-export interface IMenu{
-    name: string;
-    icon?: string;
-    link: string;
-    ariaLabel: string;
+export interface IMenu {
+	name: string;
+	icon?: string;
+	link: string;
+	ariaLabel: string;
 }
