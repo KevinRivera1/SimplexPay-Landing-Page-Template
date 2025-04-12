@@ -25,7 +25,9 @@
 	},
 	"javascript": {
 		"formatter": {
-			"quoteStyle": "double"
+			"trailingCommas": "all",
+			"quoteStyle": "single",
+			"semicolons": "always"
 		}
 	},
 	"overrides": [
