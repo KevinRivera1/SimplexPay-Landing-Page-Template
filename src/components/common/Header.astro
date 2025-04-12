@@ -1,3 +1,33 @@
-<header>
-    <h1>header</h1>
+---
+import Logo from '@assets/svg/logo.svg';
+---
+<header class="sticky top-0 z-50">
+    <div class="wrapper container mx-auto px-4 lg:px-0">
+        <div class="flex items-center justify-between gap-x-10 py-4 font-semibold">
+            <figure>
+                <a href="/" aria-label="Home">
+                    <Logo aria-hidden="true"/>
+                </a>
+            </figure>
+            <nav class="hidden md:block flex-1">
+                <ul class="flex gap-x-8">
+                    <li><a href="/about" class="text-gray-600">About</a></li>
+                    <li><a href="/services" class="text-gray-600">Services</a></li>
+                    <li><a href="/contact" class="text-gray-600">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="hidden md:flex items-center space-x-4">
+                <a href="/login" class="px-4 py-2 outline outline-gray-400 rounded-xl">Login</a>
+                <a href="/signup" class="bg-esmeralda text-white px-4 py-2 rounded-xl">Sign Up</a>
+            </div>
+
+            <div class="md:hidden flex items-center">
+                <button class="p-2 rounded-md hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500" aria-label="Toggle navigation">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </div>
 </header>
