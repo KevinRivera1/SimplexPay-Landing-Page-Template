@@ -4,11 +4,11 @@
 	"description": "Supports small businesses with simplified invoicing, powerful integrations, and cash flow management tools.",
 	"buttons": {
 		"primary": {
-			"text": "Get started",
+			"text": "Get Started Now",
 			"link": "/get-started"
 		},
 		"secondary": {
-			"text": "Learn more",
+			"text": "Learn More",
 			"link": "/learn-more"
 		}
 	}
