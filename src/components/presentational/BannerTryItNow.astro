@@ -1,0 +1,22 @@
+---
+import { getBannerTryItNow } from '@application/use-cases/getBannerTryItNow';
+import ArrowUp from '@assets/svg/ArrowUp.svg';
+
+const Banner = await getBannerTryItNow();
+---
+<section>
+    <div class="bg-esmeralda-dark container mx-auto p-8 md:p-16 sm:rounded-2xl">
+      <div class="grid grid-cols-1 items-center gap-8 lg:grid-cols-2">
+        <div>
+          <h2 class="text-sm font-semibold tracking-wider text-green-300 uppercase">{Banner.subtitle}</h2>
+          <h3 class="mt-4 text-3xl font-bold text-white md:text-5xl">{Banner.title}</h3>
+          <p class="mt-4 text-base text-pretty text-gray-300/80">{Banner.description}</p>
+        </div>
+  
+        <div class="flex flex-col items-center justify-end gap-4 sm:flex-row">
+          <a href="/register" class="bg-esmeralda inline-block w-full rounded-lg px-8 py-3 text-center font-medium text-white transition-colors duration-300 hover:bg-green-600 md:w-max">{Banner.buttons.primary.text}</a>
+          <a href="/contact" class="outline-esmeralda flex items-center justify-center gap-x-2 w-full rounded-lg px-8 py-3 text-center font-medium text-white outline transition-colors duration-300 hover:bg-green-50 hover:text-green-500 md:w-max"> {Banner.buttons.secondary.text} <ArrowUp /> </a>
+        </div>
+      </div>
+    </div>
+</section>  
