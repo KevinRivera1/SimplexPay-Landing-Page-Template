@@ -1,0 +1,15 @@
+{
+	"logo": {
+		"src": "/",
+		"alt": "Inicio"
+	},
+	"navLinks": [
+		{ "text": "About", "url": "/about" },
+		{ "text": "Services", "url": "/services" },
+		{ "text": "Contact", "url": "/contact" }
+	],
+	"auth": {
+		"login": { "text": "Login", "url": "/login" },
+		"signup": { "text": "Sign Up", "url": "/signup" }
+	}
+}
