@@ -1,3 +1,83 @@
-<footer>
-    footer
+---
+import { getFooterData } from '@application/use-cases/getFooterData';
+import Facebook from '@assets/svg/Facebook.svg';
+import Linkedin from '@assets/svg/Linkedin.svg';
+import X from '@assets/svg/X.svg';
+import Logo from '@assets/svg/logo.svg';
+
+const footerContent = await getFooterData();
+
+const { logo, sections, socialMedia, copyright } = footerContent;
+
+const socialIcons = {
+	Twitter: X,
+	LinkedIn: Linkedin,
+	Facebook: Facebook,
+};
+type SocialPlatform = keyof typeof socialIcons;
+---
+
+<footer class="bg-gray-50 py-10 text-gray-600">
+  <div class="container mx-auto px-4 lg:px-0">
+    <div
+      class="flex flex-col flex-wrap items-start justify-between gap-10 md:flex-row md:gap-4"
+    >
+      <!-- Columna 1: Logo o Identidad -->
+      <div class="flex flex-1 flex-col">
+        <figure class="mb-4">
+          <a href={logo.link}>
+            <Logo aria-hidden="true" />
+          </a>
+        </figure>
+      </div>
+
+      <div class="grid w-full grid-cols-1 place-content-center gap-10 md:grid-cols-3 lg:w-auto lg:grid-cols-3">
+        {sections.map((section) => (
+          <div>
+            <h2 class="mb-4 font-semibold text-gray-800">{section.title}</h2>
+            <ul class="space-y-2">
+              {section.links.map((link) => (
+                <li>
+                  <a href={link.url} class="transition-colors hover:text-gray-900">
+                    {link.text}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+        ))}
+      </div>
+
+      <!-- Columna 5: Redes Sociales -->
+      <div class="flex flex-1 flex-col items-end">
+        <!-- Redes Sociales -->
+        <h3 class="font-semibold text-gray-800">{socialMedia.title}</h3>
+        <ul class="mt-4 flex items-center justify-center space-x-3">
+          {
+            socialMedia.links.map((social)=>{
+              const Icon = socialIcons[social.platform as SocialPlatform];
+              return (
+                <li>
+                  <a
+                    href={social.url}
+                    class="text-gray-600 transition-colors hover:text-gray-800"
+                    aria-label={social.platform}
+                  >
+                    <Icon class="fill-esmeralda" />
+                  </a>
+                </li>
+              );
+            })
+          }
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Divider horizontal -->
+  <div class="mt-8 border-t border-gray-200 pt-6 text-center text-sm">
+    <small class="block text-pretty">
+      &copy; {copyright.text}
+    </small>
+  </div>
 </footer>
