@@ -1,0 +1,15 @@
+{
+	"subtitle": "Try it now",
+	"title": "Ready to level up your payment process?",
+	"description": "Supports small businesses with simplified invoicing, powerful integrations, and cash flow management tools.",
+	"buttons": {
+		"primary": {
+			"text": "Get started",
+			"link": "/get-started"
+		},
+		"secondary": {
+			"text": "Learn more",
+			"link": "/learn-more"
+		}
+	}
+}
