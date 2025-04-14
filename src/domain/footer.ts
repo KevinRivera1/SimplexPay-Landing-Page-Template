@@ -29,11 +29,7 @@ export interface Section {
 
 export interface SectionLink {
 	text: string;
-	url: URL;
-}
-
-export enum URL {
-	Empty = '#',
+	url: string;
 }
 
 export interface SocialMedia {
@@ -43,7 +39,7 @@ export interface SocialMedia {
 
 export interface SocialMediaLink {
 	platform: string;
-	url: URL;
+	url: string;
 	iconComponent: string;
 	ariaLabel: string;
 }
