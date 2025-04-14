@@ -144,4 +144,10 @@ const { logo, navLinks, auth } = MenuContent;
       mobileMenu.classList.add("-translate-y-full");
     }
   });
+
+  window.addEventListener("resize", () => {
+    if (window.innerWidth >= 768) {
+      mobileMenu.classList.add("-translate-y-full");
+    }
+  });
 </script>
