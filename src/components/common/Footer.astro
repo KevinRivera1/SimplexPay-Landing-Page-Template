@@ -1,14 +1,13 @@
 ---
+import { getFooterData } from '@application/use-cases/getFooterData';
 import Facebook from '@assets/svg/Facebook.svg';
 import Linkedin from '@assets/svg/Linkedin.svg';
 import X from '@assets/svg/X.svg';
 import Logo from '@assets/svg/logo.svg';
 
-import FooterData from '@data/Footer.json';
+const footerContent = await getFooterData();
 
-const { footer } = FooterData;
-const { content } = footer;
-const { logo, sections, socialMedia, copyright } = content;
+const { logo, sections, socialMedia, copyright } = footerContent;
 
 const socialIcons = {
 	Twitter: X,
