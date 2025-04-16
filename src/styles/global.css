@@ -15,6 +15,10 @@
 	@apply fill-[#2A8E9E];
 }
 
+@utility text-esmeralda {
+	@apply text-[#2A8E9E];
+}
+
 @theme {
 	--font-onest: "Onest Variable", helvetica;
 }
