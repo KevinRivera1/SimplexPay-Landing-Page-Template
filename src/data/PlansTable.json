@@ -1,0 +1,27 @@
+{
+	"title": "CHOOSE PLAN",
+	"plans": [
+		{
+			"_id": "plan_plus",
+			"name": "Plus",
+			"price": {
+				"amount": 19,
+				"currency": "USD",
+				"billing_cycle": "monthly",
+				"formatted": "$19/month"
+			},
+			"highlighted": false
+		},
+		{
+			"_id": "plan_premium",
+			"name": "Premium",
+			"price": {
+				"amount": 30,
+				"currency": "USD",
+				"billing_cycle": "monthly",
+				"formatted": "$30/month"
+			},
+			"highlighted": true
+		}
+	]
+}
