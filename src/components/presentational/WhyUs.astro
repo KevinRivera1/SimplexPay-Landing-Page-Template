@@ -1,0 +1,69 @@
+---
+import ArrowRightLeft from '@assets/svg/Arrow-right-left.svg';
+import LandMark from '@assets/svg/Landmark.svg';
+import Spaces from '@assets/svg/Spaces.svg';
+---
+
+<section aria-labelledby="why-SimplexPay">
+  <div class="container mx-auto p-16">
+    <small class="text-center inline-block text-esmeralda font-bold w-full mb-8"
+      >WHY US</small
+    >
+    <header class="max-w-2xl mx-auto text-center mb-12">
+      <h2 id="why-finpay" class="text-3xl font-extrabold text-gray-900">
+        Why they prefer <span class="text-teal-600">SimplexPay</span>
+      </h2>
+    </header>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div class="bg-white rounded-2xl shadow p-8 flex flex-col justify-center">
+        <span class="text-5xl font-bold text-teal-600">3k+</span>
+        <p class="mt-2 text-gray-700">
+          Businesses already running on SimplexPay
+        </p>
+      </div>
+
+      <div
+        class="bg-white rounded-2xl shadow p-8 flex flex-col items-center gap-8"
+      >
+        <div>
+          <h3 class="text-lg font-semibold text-gray-900">
+            Instant Withdraw your funds at any time
+          </h3>
+        </div>
+        <div class="flex gap-6 flex-shrink-0">
+          <Spaces class="w-16 h-16 text-teal-600" />
+          <ArrowRightLeft class="w-16 h-16 text-teal-600" />
+          <LandMark class="w-16 h-16 text-teal-600" />
+        </div>
+      </div>
+
+      <div class="md:col-span-2 bg-white rounded-2xl shadow p-8">
+        <div
+          class="flex flex-col lg:flex-row lg:items-center lg:justify-between"
+        >
+          <div class="mb-6 lg:mb-0">
+            <h3 class="text-xl font-semibold text-gray-900">
+              No asset volatility
+            </h3>
+            <p class="mt-2 text-gray-600">
+              Generate returns on your cash reserves without making any
+              investments.
+            </p>
+          </div>
+
+          <figure class="w-full lg:w-1/2">
+            <img
+              src="/path/to/chart.png"
+              alt="Evolución 6 meses de reservas"
+              class="w-full h-auto rounded-lg"
+            />
+            <figcaption class="mt-2 text-sm text-gray-500">
+              Resumen: $1,876,580 en 6 meses
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
