@@ -1,31 +1,31 @@
+---
+import { getExperiencePayment } from "@application/use-cases/getExperiencePayment"
+
+const ExperiencePaymentData = await getExperiencePayment();
+---
+
 <section>
     <div class="container mx-auto rounded-2xl bg-white/60 px-6 py-12 shadow-lg md:px-12 lg:py-20">
       <div class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
         <div class="space-y-2 lg:col-span-2">
-          <span class="text-esmeralda text-sm font-semibold uppercase">Future Payment</span>
-          <h2 class="text-3xl font-semibold text-gray-900 md:text-4xl lg:text-6xl mt-4">Experience that grows with your scale.</h2>
+          <span class="text-esmeralda text-sm font-semibold uppercase">{ExperiencePaymentData.section.title}</span>
+          <h2 class="text-3xl font-semibold text-gray-900 md:text-4xl lg:text-6xl mt-4">{ExperiencePaymentData.section.headline}</h2>
         </div>
   
         <div class="flex items-center">
-          <p class="text-gray-600">Design a financial operating system that works for your business and streamlines cash flow management.</p>
+          <p class="text-gray-600">{ExperiencePaymentData.section.description}</p>
         </div>
   
         <div class="md:col-span-2 lg:col-span-3">
           <div class="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
-            <article class="w-full space-y-2 rounded-lg p-0 md:w-[18rem]">
-              <h3 class="text-xl font-semibold text-gray-800 md:text-2xl">Free Transfers</h3>
-              <p class="text-gray-600">Create a financial experience and automate repeat purchases by scheduling recurring payments.</p>
-            </article>
-  
-            <article class="w-full space-y-2 rounded-lg p-0 md:w-[18rem]">
-              <h3 class="text-xl font-semibold text-gray-800 md:text-2xl">Multiple Accounts</h3>
-              <p class="text-gray-600">Run your operations with funds from your account and generate yields on idle balances.</p>
-            </article>
-  
-            <article class="w-full space-y-2 rounded-lg p-0 md:w-[18rem]">
-              <h3 class="text-xl font-semibold text-gray-800 md:text-2xl">Unmatched Security</h3>
-              <p class="text-gray-600">Securely manage finances with organization-wide MFA, card-locking, and account-level controls.</p>
-            </article>
+            {
+              ExperiencePaymentData.section.features.map((item)=>(
+                <article class="w-full space-y-2 rounded-lg p-0 md:w-[18rem]">
+                  <h3 class="text-xl font-semibold text-gray-800 md:text-2xl">{item.title}</h3>
+                  <p class="text-gray-600">{item.description}</p>
+                </article>
+              ))
+            }
           </div>
         </div>
       </div>
