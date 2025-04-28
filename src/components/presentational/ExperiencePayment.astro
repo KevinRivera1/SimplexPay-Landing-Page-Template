@@ -1,34 +1,42 @@
 ---
-import { getExperiencePayment } from "@application/use-cases/getExperiencePayment"
+import { getExperiencePayment } from "@application/use-cases/getExperiencePayment";
+import MasterCard from "@assets/svg/MasterCard.svg";
+import Shield from "@assets/svg/Shield.svg";
+import Landmark from "@assets/svg/Landmark.svg";
 
 const ExperiencePaymentData = await getExperiencePayment();
+
+const experienceIcons = {
+  MasterCard: MasterCard,
+  Shield: Shield,
+  Landmark: Landmark,
+};
+type ExperienceIcons = keyof typeof experienceIcons;
 ---
 
 <section>
-    <div class="container mx-auto rounded-2xl bg-white/60 px-6 py-12 shadow-lg md:px-12 lg:py-20">
-      <div class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
-        <div class="space-y-2 lg:col-span-2">
-          <span class="text-esmeralda text-sm font-semibold uppercase">{ExperiencePaymentData.section.title}</span>
-          <h2 class="text-3xl font-semibold text-gray-900 md:text-4xl lg:text-6xl mt-4">{ExperiencePaymentData.section.headline}</h2>
-        </div>
-  
-        <div class="flex items-center">
-          <p class="text-gray-600">{ExperiencePaymentData.section.description}</p>
-        </div>
-  
-        <div class="md:col-span-2 lg:col-span-3">
-          <div class="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
-            {
-              ExperiencePaymentData.section.features.map((item)=>(
-                <article class="w-full space-y-2 rounded-lg p-0 md:w-[18rem]">
-                  <h3 class="text-xl font-semibold text-gray-800 md:text-2xl">{item.title}</h3>
-                  <p class="text-gray-600">{item.description}</p>
-                </article>
-              ))
-            }
-          </div>
+  <div class="container mx-auto rounded-2xl bg-white/60 px-6 py-12 shadow-lg md:px-12 lg:py-20">
+    <div class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+      <div class="space-y-2 lg:col-span-2">
+        <span class="text-esmeralda text-sm font-semibold uppercase">{ExperiencePaymentData.section.title}</span>
+        <h2 class="mt-4 text-3xl font-semibold text-gray-900 md:text-4xl lg:text-6xl">{ExperiencePaymentData.section.headline}</h2>
+      </div>
+
+      <div class="flex items-center">
+        <p class="text-gray-600">{ExperiencePaymentData.section.description}</p>
+      </div>
+
+      <div class="md:col-span-2 lg:col-span-3 mt-4">
+        <div class="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+          { ExperiencePaymentData.section.features.map((item) => { const Icon = experienceIcons[item.icon as ExperienceIcons]; return (
+          <article class="w-full space-y-2 rounded-lg p-0 md:w-[18rem]">
+            <Icon class="text-esmeralda size-20" />
+            <h3 class="text-xl font-semibold text-gray-800 md:text-2xl mt-4">{item.title}</h3>
+            <p class="text-gray-600">{item.description}</p>
+          </article>
+          ) }) }
         </div>
       </div>
     </div>
+  </div>
 </section>
-  
