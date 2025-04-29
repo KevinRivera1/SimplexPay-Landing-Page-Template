@@ -2,21 +2,35 @@
 import ArrowUp from "@assets/svg/ArrowUp.svg";
 ---
 
-<section>
+<section aria-labelledby="hero-title">
     <div class="container mx-auto px-6 py-12 md:px-12 lg:py-20">
-        <div class="grid grid-cols-1 md:grid-cols-2">
-          <div class="content flex flex-col gap-8">
-            <h1 class="md:text-3xl lg:text-6xl font-bold">Get paid early save automatically all your pay.</h1>
-            <p class="text-xl text-pretty text-slate-600">Supports small businesses simple invoicing, powerful integrations, and cash flow management tools.</p>
-            <form class="bussiness-email flex flex-col gap-4 lg:gap-0 lg:flex-row">
-              <input class="outline-esmeralda rounded-tl-xl rounded-bl-xl bg-slate-400/10 p-3 outline" type="email" name="email" id="email" placeholder="Your bussiness email" />
-              <button class="bg-esmeralda outline-esmeralda flex cursor-pointer items-center gap-2 rounded-tr-xl rounded-br-xl p-3 text-white outline">Get Started <ArrowUp class="inline-block size-6" /></button>
-            </form>
-            <div class="sponsors"></div>
-          </div>
-          <div class="image flex items-center justify-center p-4 lg:p-0">
-            <img src="/images/card-payment.png" alt="card-payment" class="size-full lg:size-[60vh]" />
-          </div>
+        <div class="grid grid-cols-1 items-center gap-8 md:grid-cols-2">
+            <div class="space-y-6">
+                <h1 id="hero-title" class="text-3xl leading-tight font-extrabold text-gray-900 sm:text-4xl md:text-5xl lg:text-6xl">Get paid early, save automatically all your pay.</h1>
+                <p class="text-base text-gray-600 sm:text-lg lg:text-xl">Supports small businesses with simple invoicing, powerful integrations, and cash flow management tools.</p>
+        
+                <form action="#" method="post" class="flex flex-col space-y-4 sm:flex-row sm:space-y-0 sm:space-x-4" novalidate>
+                    <label for="email" class="sr-only">Business email</label>
+                    <input type="email" id="email" name="email" required aria-required="true" placeholder="Your business email" class="focus:ring-esmeralda w-full rounded-xl border border-gray-300 px-2 py-4  text-gray-900 placeholder-gray-400 focus:border-transparent focus:ring-2 focus:outline-none" />
+                    <button type="submit" class="bg-esmeralda hover:bg-esmeralda-dark focus:ring-esmeralda inline-flex items-center justify-center rounded-xl w-full px-2 py-4 text-base font-medium text-white transition focus:ring-2 focus:ring-offset-2">
+                    Get Started
+                    <ArrowUp class="inline-block size-6" />
+                    </button>
+                </form>
+        
+                <div class="flex items-center space-x-6" aria-label="Trusted by">
+                    <img src="/logos/logo1.svg" alt="Logo Empresa 1" class="h-6 w-auto" loading="lazy" />
+                    <img src="/logos/logo2.svg" alt="Logo Empresa 2" class="h-6 w-auto" loading="lazy" />
+                    <img src="/logos/logo3.svg" alt="Logo Empresa 3" class="h-6 w-auto" loading="lazy" />
+                </div>
+            </div>
+    
+            <div class="flex justify-center">
+                <figure>
+                    <img src="/images/card-payment.png" alt="Ilustración de proceso de pago con tarjeta" class="h-auto w-full max-w-md object-contain" loading="lazy" />
+                </figuure>
+            </div>
         </div>
-    </div>           
+    </div>
 </section>
+  
