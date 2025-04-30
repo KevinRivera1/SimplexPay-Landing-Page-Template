@@ -1,4 +1,7 @@
 ---
+import Coinbase from "@assets/sponsors/Coinbase.svg";
+import Instacart from "@assets/sponsors/Instacart.svg";
+import Klarna from "@assets/sponsors/Klarna.svg";
 import ArrowUp from "@assets/svg/ArrowUp.svg";
 ---
 
@@ -9,19 +12,19 @@ import ArrowUp from "@assets/svg/ArrowUp.svg";
                 <h1 id="hero-title" class="text-3xl leading-tight font-extrabold text-gray-900 sm:text-4xl md:text-5xl lg:text-6xl">Get paid early, save automatically all your pay.</h1>
                 <p class="text-base text-gray-600 sm:text-lg lg:text-xl">Supports small businesses with simple invoicing, powerful integrations, and cash flow management tools.</p>
         
-                <form action="#" method="post" class="flex flex-col space-y-4 sm:flex-row sm:space-y-0 sm:space-x-4" novalidate>
+                <form action="#" method="post" class="flex flex-col gap-y-4 lg:flex-row lg:gap-y-0" novalidate>
                     <label for="email" class="sr-only">Business email</label>
-                    <input type="email" id="email" name="email" required aria-required="true" placeholder="Your business email" class="focus:ring-esmeralda w-full rounded-xl border border-gray-300 px-2 py-4  text-gray-900 placeholder-gray-400 focus:border-transparent focus:ring-2 focus:outline-none" />
-                    <button type="submit" class="bg-esmeralda hover:bg-esmeralda-dark focus:ring-esmeralda inline-flex items-center justify-center rounded-xl w-full px-2 py-4 text-base font-medium text-white transition focus:ring-2 focus:ring-offset-2">
+                    <input type="email" id="email" name="email" required aria-required="true" placeholder="Your business email" class="px-4 py-2 focus:ring-esmeralda rounded-bl-xl rounded-tl-xl border border-gray-300 text-gray-900 placeholder-gray-400 focus:border-transparent focus:ring-2 focus:outline-none" />
+                    <button type="submit" class="bg-esmeralda hover:bg-esmeralda-dark focus:ring-esmeralda inline-flex gap-2 items-center px-4 py-2 justify-center rounded-br-xl rounded-tr-xl text-base text-white transition focus:ring-2 focus:ring-offset-2">
                     Get Started
                     <ArrowUp class="inline-block size-6" />
                     </button>
                 </form>
         
-                <div class="flex items-center space-x-6" aria-label="Trusted by">
-                    <img src="/logos/logo1.svg" alt="Logo Empresa 1" class="h-6 w-auto" loading="lazy" />
-                    <img src="/logos/logo2.svg" alt="Logo Empresa 2" class="h-6 w-auto" loading="lazy" />
-                    <img src="/logos/logo3.svg" alt="Logo Empresa 3" class="h-6 w-auto" loading="lazy" />
+                <div class="flex items-center justify-between gap-x-6 lg:gap-x-0" aria-label="Trusted by"< >
+                    <Klarna class="h-12 w-auto" aria-hidden="true"/>
+                    <Coinbase class="h-12 w-auto" aria-hidden="true"/>
+                    <Instacart class="h-12 w-auto" aria-hidden="true"/>
                 </div>
             </div>
     
