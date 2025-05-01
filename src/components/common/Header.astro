@@ -1,3 +1,166 @@
-<header>
-    <h1>header</h1>
+---
+import { getMenuData } from '@application/use-cases/getMenuData';
+import Logo from '@assets/svg/logo.svg';
+const MenuContent = await getMenuData();
+const { logo, navLinks, auth } = MenuContent;
+---
+
+<style lang="scss">
+  .header {
+    animation: blur linear both;
+    animation-timeline: scroll();
+    animation-range: 0 3.125rem;
+    @keyframes blur {
+      to {
+        background: #E9F3F4;
+        backdrop-filter: blur(0.625rem);
+      }
+    }
+  }
+</style>
+<header class="header sticky top-0 z-50">
+  <div class="wrapper container mx-auto px-4 lg:px-0">
+    <div class="flex items-center justify-between gap-x-10 py-4 font-semibold">
+      <figure>
+        <a href={logo.src} aria-label={logo.alt}>
+          <Logo aria-hidden="true" />
+        </a>
+      </figure>
+      <nav class="hidden md:block flex-1">
+        <ul class="flex gap-x-8">
+          {
+            navLinks.map((item) => (
+              <li>
+                <a href={item.url} class="text-gray-600 hover:text-gray-800">
+                  {item.text}
+                </a>
+              </li>
+            ))
+          }
+        </ul>
+      </nav>
+      <div class="hidden md:flex items-center space-x-4">
+        <a
+          href={auth.login.url}
+          class="px-4 py-2 outline outline-esmeralda hover:outline-green-600 hover:bg-green-50 rounded-xl"
+          >{auth.login.text}</a
+        >
+        <a
+          href={auth.signup.url}
+          class="bg-esmeralda hover:bg-green-600 text-white px-4 py-2 rounded-xl"
+          >{auth.signup.text}</a
+        >
+      </div>
+
+      <div class="md:hidden flex items-center">
+        <button
+          id="mobile-menu-toggle"
+          class="p-2 rounded-md hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500"
+          aria-label="Toggle navigation"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-6 w-6"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h16m-7 6h7"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <nav
+    id="mobile-menu"
+    class="md:hidden fixed inset-0 bg-white z-40 transform -translate-y-full transition-transform duration-300 ease-in-out overflow-auto"
+  >
+    <div class="container mx-auto px-4 py-6">
+      <div class="flex items-center justify-between mb-6">
+        <a href="/" aria-label="Home">
+          <Logo aria-hidden="true" />
+        </a>
+        <button
+          id="mobile-menu-close"
+          class="p-2 rounded-md hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500"
+          aria-label="Close navigation"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-6 w-6"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M6 18L18 6M6 6l12 12"></path>
+          </svg>
+        </button>
+      </div>
+      <ul class="space-y-4">
+        {
+          navLinks.map((item) => (
+            <li>
+              <a
+                href={item.url}
+                class="block text-gray-600 hover:text-gray-800"
+              >
+                {item.text}
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+      <div class="mt-6 flex flex-col space-y-4">
+        <a
+          href={auth.login.url}
+          class="block text-center px-4 py-2 outline outline-esmeralda hover:outline-green-600 rounded-xl hover:bg-green-50"
+          >{auth.login.text}</a
+        >
+        <a
+          href={auth.signup.url}
+          class="block text-center bg-esmeralda text-white px-4 py-2 rounded-xl hover:bg-green-600"
+          >{auth.signup.text}</a
+        >
+      </div>
+    </div>
+  </nav>
 </header>
+
+<script>
+  const menuToggle = document.getElementById(
+    "mobile-menu-toggle"
+  ) as HTMLButtonElement;
+  const menuClose = document.getElementById(
+    "mobile-menu-close"
+  ) as HTMLButtonElement;
+  const mobileMenu = document.getElementById("mobile-menu") as HTMLDivElement;
+
+  menuToggle.addEventListener("click", () => {
+    mobileMenu.classList.remove("-translate-y-full");
+  });
+
+  menuClose.addEventListener("click", () => {
+    mobileMenu.classList.add("-translate-y-full");
+  });
+
+  mobileMenu.addEventListener("click", (e) => {
+    if (e.target === mobileMenu) {
+      mobileMenu.classList.add("-translate-y-full");
+    }
+  });
+
+  window.addEventListener("resize", () => {
+    if (window.innerWidth >= 768) {
+      mobileMenu.classList.add("-translate-y-full");
+    }
+  });
+</script>

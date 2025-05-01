@@ -1,0 +1,22 @@
+---
+import { getBannerBenefits } from '@application/use-cases/getBannerBenefits';
+
+const Benefits = await getBannerBenefits();
+---
+<section class="bg-esmeralda-dark">
+  <div class="wrapper container mx-auto py-12 px-4 sm:py-16 sm:px-6 lg:py-20 lg:px-16 text-white">
+    <small class="block uppercase text-sm tracking-wider text-esmeralda-light mb-2">{Benefits.title}</small>
+    <h2 class="text-3xl w-full text-pretty sm:text-4xl lg:w-[50%] font-bold leading-tight">{Benefits.headline}</h2>
+    <div role="list" class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 mt-8">
+      {
+        Benefits.steps.map((step) => (
+          <article role="listitem" class="flex flex-col items-center text-center bg-white/10 rounded-2xl p-6 sm:p-8 hover:bg-opacity-20 transition">
+            <span class="text-5xl sm:text-6xl md:text-7xl font-semibold text-esmeralda mb-4">{step.value}</span>
+            <h3 class="text-xl sm:text-2xl font-bold mb-2">{step.label}</h3>
+            <p class="text-sm sm:text-base leading-relaxed text-pretty">{step.description}</p>
+          </article>
+        ))
+      }
+  </div>
+</section>
+  

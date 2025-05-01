@@ -1,0 +1,97 @@
+{
+	"footer": {
+		"content": {
+			"logo": {
+				"link": "/",
+				"component": "Logo"
+			},
+			"sections": [
+				{
+					"title": "Solutions",
+					"links": [
+						{
+							"text": "Small Businesses",
+							"url": "#"
+						},
+						{
+							"text": "Freelancers",
+							"url": "#"
+						},
+						{
+							"text": "Customers",
+							"url": "#"
+						},
+						{
+							"text": "Taxes",
+							"url": "#"
+						}
+					]
+				},
+				{
+					"title": "Company",
+					"links": [
+						{
+							"text": "About Us",
+							"url": "#"
+						},
+						{
+							"text": "Career",
+							"url": "#"
+						},
+						{
+							"text": "Contact",
+							"url": "#"
+						}
+					]
+				},
+				{
+					"title": "Learn",
+					"links": [
+						{
+							"text": "Blog",
+							"url": "#"
+						},
+						{
+							"text": "Ebooks",
+							"url": "#"
+						},
+						{
+							"text": "Guides",
+							"url": "#"
+						},
+						{
+							"text": "Templates",
+							"url": "#"
+						}
+					]
+				}
+			],
+			"socialMedia": {
+				"title": "Follow us on",
+				"links": [
+					{
+						"platform": "Twitter",
+						"url": "#",
+						"iconComponent": "X",
+						"ariaLabel": "Twitter"
+					},
+					{
+						"platform": "LinkedIn",
+						"url": "#",
+						"iconComponent": "Linkedin",
+						"ariaLabel": "LinkedIn"
+					},
+					{
+						"platform": "Facebook",
+						"url": "#",
+						"iconComponent": "Facebook",
+						"ariaLabel": "Facebook"
+					}
+				]
+			},
+			"copyright": {
+				"text": "2025 SimplexPay. All Rights Reserved. | Hecho por Kevin Rivera"
+			}
+		}
+	}
+}

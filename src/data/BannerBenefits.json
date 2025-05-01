@@ -1,0 +1,21 @@
+{
+	"title": "STEP",
+	"headline": "Maximize your returns with a Reserve account that generates.",
+	"steps": [
+		{
+			"value": "1",
+			"label": "Open your account",
+			"description": "Sign up to SimplexPay and set up your account from the dashboard"
+		},
+		{
+			"value": "2",
+			"label": "Transfer your money",
+			"description": "Move money from to another account info and start to earning up."
+		},
+		{
+			"value": "3",
+			"label": "Watch your balance grow",
+			"description": "Accessed instantly and remain insulated from market volatility."
+		}
+	]
+}
