@@ -1,31 +1,146 @@
-# Astro Starter Kit: Basics
+# 🚀 Landing Page Template - Astro
 
-```sh
-bun create astro@latest -- --template basics
+Una **landing page template** reutilizable construida con [Astro](https://astro.build/), diseñada para ser fácilmente personalizable utilizando archivos JSON. Ideal para desarrolladores que buscan una estructura rápida y flexible para proyectos de presentación, productos o servicios.
+
+---
+
+## ✨ Características
+
+- ⚡ Desarrollada con Astro para rendimiento ultra rápido.
+- 🧩 Estructura modular y limpia.
+- 📝 Fácil de personalizar mediante archivos en `data/`.
+- 🎨 Estilos modernos y responsive.
+- 🌐 SEO básico incorporado.
+
+## 🧑‍💻 Tecnologías Utilizadas
+
+- [Astro](https://astro.build/) - Framework para construir sitios web rápidos.
+- [Bun](https://bun.sh/) - Gestor de dependencias y ejecutador de scripts.
+- [Tailwind CSS](https://tailwindcss.com/) - Framework de diseño para crear interfaces modernas.
+- [TypeScript](https://www.typescriptlang.org/) - Para tipado estático y mejorar la calidad del código.
+- [JSON](https://www.json.org/json-en.html) - Para configuración dinámica del contenido.
+
+---
+
+## 📁 Estructura del Proyecto
+
+```
+└── 📁src
+    └── 📁application
+        └── 📁use-cases
+            └── getBannerBenefits.ts
+            └── getBannerTryItNow.ts
+            └── getExperiencePayment.ts
+            └── getFooterData.ts
+            └── getHero.ts
+            └── getMenuData.ts
+            └── getOurMission.ts
+            └── getPlansTable.ts
+    └── 📁assets
+        └── 📁sponsors
+            └── Coinbase.svg
+            └── Instacart.svg
+            └── Klarna.svg
+        └── 📁svg
+            └── Arrow-right-left.svg
+            └── ArrowUp.svg
+            └── chart.svg
+            └── Facebook.svg
+            └── Landmark.svg
+            └── Linkedin.svg
+            └── logo.svg
+            └── MasterCard.svg
+            └── Shield.svg
+            └── Spaces.svg
+            └── X.svg
+    └── 📁components
+        └── 📁common
+            └── Footer.astro
+            └── Header.astro
+        └── 📁presentational
+            └── BannerTryItNow.astro
+            └── BenefitsBanner.astro
+            └── ExperiencePayment.astro
+            └── Hero.astro
+            └── OurMission.astro
+            └── PlansTable.astro
+            └── WhyUs.astro
+    └── 📁data
+        └── BannerBenefits.json
+        └── BannerTryItNow.json
+        └── ExperincePayment.json
+        └── Footer.json
+        └── Hero.json
+        └── Menu.json
+        └── OurMission.json
+        └── PlansTable.json
+    └── 📁domain
+        └── BannerBenefits.ts
+        └── BannerTryItNow.ts
+        └── ExperiencePayment.ts
+        └── footer.ts
+        └── Hero.ts
+        └── menu.ts
+        └── OurMission.ts
+        └── PlansTable.ts
+    └── 📁infrastructure
+        └── 📁repositories
+            └── BannerBenefitsRepository.ts
+            └── BannerTryItNowRepository.ts
+            └── ExperiencePayment.ts
+            └── footerRepository.ts
+            └── HeroRepository.ts
+            └── menuRepository.ts
+            └── OurMissionRepository.ts
+            └── PlansTableRepository.ts
+    └── 📁interfaces
+        └── 📁containers
+            └── LandingContainer.astro
+    └── 📁layouts
+        └── Layout.astro
+    └── 📁pages
+        └── index.astro
+    └── 📁styles
+        └── global.css
 ```
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/basics)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/basics/devcontainer.json)
+## ⚙️ Personalización
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+Todo el contenido principal de la landing page se configura desde los archivos:
+```
+    └── 📁data
+        └── BannerBenefits.json
+        └── BannerTryItNow.json
+        └── ExperincePayment.json
+        └── Footer.json
+        └── Hero.json
+        └── Menu.json
+        └── OurMission.json
+        └── PlansTable.json
+```
 
-![just-the-basics](https://github.com/withastro/astro/assets/2244813/a0a5533c-a856-4198-8470-2d67b1d7c554)
+- `BannerBenefits.json`: Configura los beneficios que se muestran en la sección de banner.
+- `BannerTryItNow.json`: Configura el texto y enlace del botón en el banner.
+- `ExperiencePayment.json`: Configura los detalles de los métodos de pago.
+- `Footer.json`: Personaliza el contenido del pie de página (links, información de contacto, etc.).
+- `Hero.json`: Modifica el título, subtítulo y otros elementos de la sección principal.
+- `Menu.json`: Personaliza el contenido del menú de navegación.
+- `OurMission.json`: Agrega o edita la información sobre la misión de tu empresa o proyecto.
+- `PlansTable.json`: Define los planes o precios que se mostrarán en la landing.
 
-## 🚀 Project Structure
+## 🛠️ Instalación y Desarrollo
+```sh
+# Clonar el repositorio
+git clone https://github.com/KevinRivera1/SimplexPay-Landing-Page-Template
 
-Inside of your Astro project, you'll see the following folders and files:
+# Ir al directorio del proyecto
+cd SimplexPay-Landing-Page-Template
 
-```text
-/
-├── public/
-│   └── favicon.svg
-├── src/
-│   ├── layouts/
-│   │   └── Layout.astro
-│   └── pages/
-│       └── index.astro
-└── package.json
+# Instalar dependencias
+bun install
+
+# Iniciar el servidor de desarrollo
+bun run dev
 ```
 
 To learn more about the folder structure of an Astro project, refer to [our guide on project structure](https://docs.astro.build/en/basics/project-structure/).
@@ -43,6 +158,12 @@ All commands are run from the root of the project, from a terminal:
 | `bun astro ...`       | Run CLI commands like `astro add`, `astro check` |
 | `bun astro -- --help` | Get help using the Astro CLI                     |
 
-## 👀 Want to learn more?
+## 🤝 Contribuciones
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+Las contribuciones son bienvenidas. Si deseas contribuir, por favor sigue estos pasos:
+
+1. Haz un Fork del repositorio.
+2. Crea una nueva rama (`git checkout -b feature/nueva-caracteristica`).
+3. Realiza tus cambios y haz commit (`git commit -am 'Añadir nueva característica'`).
+4. Push a la rama (`git push origin feature/nueva-caracteristica`).
+5. Abre un Pull Request.
