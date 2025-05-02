@@ -3,7 +3,8 @@
 		"content": {
 			"logo": {
 				"link": "/",
-				"component": "Logo"
+				"component": "Logo",
+				"alt": "Inicio"
 			},
 			"sections": [
 				{
