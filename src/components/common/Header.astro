@@ -4,21 +4,7 @@ import Logo from '@assets/svg/logo.svg';
 const MenuContent = await getMenuData();
 const { logo, navLinks, auth } = MenuContent;
 ---
-
-<style lang="scss">
-  .header {
-    animation: blur linear both;
-    animation-timeline: scroll();
-    animation-range: 0 3.125rem;
-    @keyframes blur {
-      to {
-        background: #E9F3F4;
-        backdrop-filter: blur(0.625rem);
-      }
-    }
-  }
-</style>
-<header class="header sticky top-0 z-50">
+<header class="header sticky top-0 z-50 bg-[#E9F3F4]">
   <div class="wrapper container mx-auto px-4 lg:px-0">
     <div class="flex items-center justify-between gap-x-10 py-4 font-semibold">
       <figure>
