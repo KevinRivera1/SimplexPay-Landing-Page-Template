@@ -7,14 +7,14 @@ const Mission = await getOurMission();
     <div class="container mx-auto p-8">
       <h2 class="text-esmeralda text-balance mb-8 text-center font-bold uppercase">{Mission.title}</h2>
       <div>
-        <h3 class="mb-4 text-center text-2xl font-bold text-balance sm:text-3xl md:text-5xl">{Mission.headline}</h3>
+        <h3 class="mb-4 text-center leading-tight text-2xl font-bold text-balance sm:text-3xl md:text-5xl">{Mission.headline}</h3>
         <p class="mb-8 text-center text-base text-pretty sm:text-lg">{Mission.description}</p>
   
         <div class="grid grid-cols-1 gap-8 md:grid-cols-3">
           {
             Mission.statistics.map((s)=>(
               <article class="statistic text-center">
-                <h4 class="text-4xl text-balance font-bold sm:text-5xl md:text-6xl">{s.value}</h4>
+                <h4 class="text-4xl leading-tight text-balance font-bold sm:text-5xl md:text-6xl">{s.value}</h4>
                 <p class="text-sm text-pretty sm:text-base">{s.label}</p>
               </article>
             ))

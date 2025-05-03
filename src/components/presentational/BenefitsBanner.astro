@@ -12,7 +12,7 @@ const Benefits = await getBannerBenefits();
         Benefits.steps.map((step) => (
           <article class="flex flex-col items-center text-center bg-white/10 rounded-2xl p-6 sm:p-8 hover:bg-opacity-20 transition">
             <span class="text-5xl sm:text-6xl md:text-7xl font-semibold text-esmeralda mb-4">{step.value}</span>
-            <h3 class="text-xl text-balance sm:text-2xl font-bold mb-2">{step.label}</h3>
+            <h3 class="text-xl leading-tight text-balance sm:text-2xl font-bold mb-2">{step.label}</h3>
             <p class="text-sm text-pretty sm:text-base leading-relaxed">{step.description}</p>
           </article>
         ))
