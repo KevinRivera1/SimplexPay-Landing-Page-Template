@@ -7,7 +7,7 @@ const Plans = await getPlansTable();
 
 <section>
   <div class="wrapper container mx-auto p-16">
-    <h2 class="text-center mb-8 uppercase font-bold">{Plans.title}</h2>
+    <h2 class="text-center text-esmeralda text-balance mb-8 uppercase font-bold">{Plans.title}</h2>
     <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
       {
         Plans.plans.map((plan) => (
@@ -17,8 +17,8 @@ const Plans = await getPlansTable();
             ${plan.highlighted ? "bg-esmeralda text-white" : ""}
           `}
           >
-            <h3 class="text-3xl font-bold">{plan.name}</h3>
-            <p class="text-2xl font-medium flex justify-between items-center w-full mt-20">
+            <h3 class="text-3xl text-balance font-bold">{plan.name}</h3>
+            <p class="text-2xl text-pretty font-medium flex justify-between items-center w-full mt-20">
               {plan.price.formatted} <ArrowUp class="cursor-pointer" />
             </p>
           </article>

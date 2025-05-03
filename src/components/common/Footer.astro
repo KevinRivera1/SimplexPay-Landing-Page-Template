@@ -34,7 +34,7 @@ type SocialPlatform = keyof typeof socialIcons;
       <div class="grid w-full grid-cols-1 place-content-center gap-10 md:grid-cols-3 lg:w-auto lg:grid-cols-3">
         {sections.map((section) => (
           <div>
-            <h2 class="mb-4 font-semibold text-gray-800">{section.title}</h2>
+            <h2 class="mb-4 text-balance font-semibold text-gray-800">{section.title}</h2>
             <ul class="space-y-2">
               {section.links.map((link) => (
                 <li>
@@ -51,7 +51,7 @@ type SocialPlatform = keyof typeof socialIcons;
       <!-- Columna 5: Redes Sociales -->
       <div class="flex flex-1 flex-col items-end">
         <!-- Redes Sociales -->
-        <h3 class="font-semibold text-gray-800">{socialMedia.title}</h3>
+        <h3 class="font-semibold text-balance text-gray-800">{socialMedia.title}</h3>
         <ul class="mt-4 flex items-center justify-center space-x-3">
           {
             socialMedia.links.map((social)=>{
