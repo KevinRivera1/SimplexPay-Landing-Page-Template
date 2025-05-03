@@ -1,9 +1,10 @@
 ---
-import { getMenuData } from '@application/use-cases/getMenuData';
-import Logo from '@assets/svg/logo.svg';
+import { getMenuData } from "@application/use-cases/getMenuData";
+import Logo from "@assets/svg/logo.svg";
 const MenuContent = await getMenuData();
 const { logo, navLinks, auth } = MenuContent;
 ---
+
 <header class="header sticky top-0 z-50 bg-[#E9F3F4]">
   <div class="wrapper container mx-auto px-4 lg:px-0">
     <div class="flex items-center justify-between gap-x-10 py-4 font-semibold">
@@ -122,31 +123,55 @@ const { logo, navLinks, auth } = MenuContent;
 </header>
 
 <script>
-  const menuToggle = document.getElementById(
-    "mobile-menu-toggle"
-  ) as HTMLButtonElement;
-  const menuClose = document.getElementById(
-    "mobile-menu-close"
-  ) as HTMLButtonElement;
-  const mobileMenu = document.getElementById("mobile-menu") as HTMLDivElement;
+  const btnToggle = document.querySelector<HTMLButtonElement>(
+    "#mobile-menu-toggle",
+  );
+  const btnClose =
+    document.querySelector<HTMLButtonElement>("#mobile-menu-close");
+  const menu = document.querySelector<HTMLDivElement>("#mobile-menu");
 
-  menuToggle.addEventListener("click", () => {
-    mobileMenu.classList.remove("-translate-y-full");
-  });
+  if (!btnToggle || !btnClose || !menu) {
+    throw new Error("Faltan elementos del DOM: revisa tus selectores");
+  }
 
-  menuClose.addEventListener("click", () => {
-    mobileMenu.classList.add("-translate-y-full");
-  });
+  function throttle<T extends (...args: any[]) => void>(fn: T, wait = 200): T {
+    let last = 0;
+    return ((...args: any[]) => {
+      const now = Date.now();
+      if (now - last >= wait) {
+        last = now;
+        fn(...args);
+      }
+    }) as T;
+  }
 
-  mobileMenu.addEventListener("click", (e) => {
-    if (e.target === mobileMenu) {
-      mobileMenu.classList.add("-translate-y-full");
+  const openMenu = () => {
+    if (menu.classList.contains("-translate-y-full")) {
+      menu.classList.remove("-translate-y-full");
     }
-  });
-
-  window.addEventListener("resize", () => {
-    if (window.innerWidth >= 768) {
-      mobileMenu.classList.add("-translate-y-full");
+  };
+  const closeMenu = () => {
+    if (!menu.classList.contains("-translate-y-full")) {
+      menu.classList.add("-translate-y-full");
     }
-  });
+  };
+
+  btnToggle.addEventListener("click", openMenu, { passive: true });
+  btnClose.addEventListener("click", closeMenu, { passive: true });
+
+  menu.addEventListener(
+    "click",
+    (e) => {
+      if (e.target === menu) closeMenu();
+    },
+    { passive: true },
+  );
+
+  window.addEventListener(
+    "resize",
+    throttle(() => {
+      if (window.innerWidth >= 768) closeMenu();
+    }),
+    { passive: true },
+  );
 </script>
