@@ -1,4 +1,5 @@
 ---
+import SEO from '@components/common/SEO.astro';
 import '@fontsource-variable/onest';
 import '@styles/global.css';
 ---
@@ -6,10 +7,11 @@ import '@styles/global.css';
 <!doctype html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>SimplexPay - Landing Page Template</title>
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <SEO 
+      title='SimplexPay | Landing Page Template' 
+      description='Template landing page in astrojs customizable' 
+      image='images/card-payment.png' 
+      url='https://SimplexPay-LandingPage.vercel.app/'/>
   </head>
   <body class="bg-[#E9F3F4] text-[#1D1E20] font-onest">
     <slot />
