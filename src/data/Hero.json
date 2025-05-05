@@ -1,25 +1,20 @@
 {
-    "hero": {
-      "title": "Get paid early, save automatically all your pay.",
-      "description": "Supports small businesses with simple invoicing, powerful integrations, and cash flow management tools.",
-      "form": {
-        "ctaLabel": "Get Started",
-        "placeholder": "Your business email",
-        "inputName": "email",
-        "inputType": "email"
-      },
-      "trustedBy": {
-        "label": "Trusted by",
-        "brands": [
-          "Klarna",
-          "Coinbase",
-          "Instacart"
-        ]
-      },
-      "image": {
-        "src": "/images/card-payment.png",
-        "alt": "Ilustration payment card"
-      }
-    }
+	"hero": {
+		"title": "Get paid early, save automatically all your pay.",
+		"description": "Supports small businesses with simple invoicing, powerful integrations, and cash flow management tools.",
+		"form": {
+			"ctaLabel": "Get Started",
+			"placeholder": "Your business email",
+			"inputName": "email",
+			"inputType": "email"
+		},
+		"trustedBy": {
+			"label": "Trusted by",
+			"brands": ["Klarna", "Coinbase", "Instacart"]
+		},
+		"image": {
+			"src": "/images/card-payment.png",
+			"alt": "Ilustration payment card"
+		}
+	}
 }
-  

@@ -7,8 +7,8 @@
 		"build": "astro build",
 		"preview": "astro preview",
 		"astro": "astro",
-		"format": "bunx biome format --write .",
-		"check": "bunx biome check --write ."
+		"lint": "bunx biome lint --write .",
+		"lint:fix": "bunx biome check --write ."
 	},
 	"dependencies": {
 		"@fontsource-variable/onest": "^5.2.7",

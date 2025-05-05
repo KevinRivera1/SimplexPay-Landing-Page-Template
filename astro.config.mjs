@@ -4,6 +4,7 @@ import { defineConfig } from 'astro/config';
 
 // https://astro.build/config
 export default defineConfig({
+	site: 'https://SimplexPay-LandingPage.vercel.app/',
 	vite: {
 		plugins: [tailwindcss()],
 	},
