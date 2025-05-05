@@ -1,15 +1,15 @@
 ---
-import { getExperiencePayment } from "@application/use-cases/getExperiencePayment";
-import MasterCard from "@assets/svg/MasterCard.svg";
-import Shield from "@assets/svg/Shield.svg";
-import Landmark from "@assets/svg/Landmark.svg";
+import { getExperiencePayment } from '@application/use-cases/getExperiencePayment';
+import Landmark from '@assets/svg/Landmark.svg';
+import MasterCard from '@assets/svg/MasterCard.svg';
+import Shield from '@assets/svg/Shield.svg';
 
 const ExperiencePaymentData = await getExperiencePayment();
 
 const experienceIcons = {
-  MasterCard: MasterCard,
-  Shield: Shield,
-  Landmark: Landmark,
+	MasterCard: MasterCard,
+	Shield: Shield,
+	Landmark: Landmark,
 };
 type ExperienceIcons = keyof typeof experienceIcons;
 ---

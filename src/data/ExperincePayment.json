@@ -1,25 +1,24 @@
 {
-    "section": {
-      "title": "Future Payment",
-      "headline": "Experience that grows with your scale.",
-      "description": "Design a financial operating system that works for your business and streamlines cash flow management.",
-      "features": [
-        { 
-          "icon":"MasterCard",
-          "title": "Free Transfers",
-          "description": "Create a financial experience and automate repeat purchases by scheduling recurring payments."
-        },
-        {
-          "icon":"Landmark",
-          "title": "Multiple Accounts",
-          "description": "Run your operations with funds from your account and generate yields on idle balances."
-        },
-        {
-          "icon":"Shield",
-          "title": "Unmatched Security",
-          "description": "Securely manage finances with organization-wide MFA, card-locking, and account-level controls."
-        }
-      ]
-    }
+	"section": {
+		"title": "Future Payment",
+		"headline": "Experience that grows with your scale.",
+		"description": "Design a financial operating system that works for your business and streamlines cash flow management.",
+		"features": [
+			{
+				"icon": "MasterCard",
+				"title": "Free Transfers",
+				"description": "Create a financial experience and automate repeat purchases by scheduling recurring payments."
+			},
+			{
+				"icon": "Landmark",
+				"title": "Multiple Accounts",
+				"description": "Run your operations with funds from your account and generate yields on idle balances."
+			},
+			{
+				"icon": "Shield",
+				"title": "Unmatched Security",
+				"description": "Securely manage finances with organization-wide MFA, card-locking, and account-level controls."
+			}
+		]
+	}
 }
-  

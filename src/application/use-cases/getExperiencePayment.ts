@@ -1,3 +1,4 @@
-import { getExperiencePaymentDataRepository } from "@infrastructure/repositories/ExperiencePayment";
+import { getExperiencePaymentDataRepository } from '@infrastructure/repositories/ExperiencePayment';
 
-export const getExperiencePayment = async () => await getExperiencePaymentDataRepository.getAll();
+export const getExperiencePayment = async () =>
+	await getExperiencePaymentDataRepository.getAll();
