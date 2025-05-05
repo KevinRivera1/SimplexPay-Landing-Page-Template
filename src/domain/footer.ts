@@ -20,6 +20,7 @@ export interface Copyright {
 export interface Logo {
 	link: string;
 	component: string;
+	alt: string;
 }
 
 export interface Section {
